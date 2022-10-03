@@ -6,9 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>469</width>
-    <height>472</height>
+    <width>321</width>
+    <height>362</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="floating">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>Countdown Timer</string>
@@ -19,8 +28,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>469</width>
-      <height>449</height>
+      <width>321</width>
+      <height>341</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -105,19 +114,25 @@
      <item>
       <layout class="QHBoxLayout" name="sourceDropDownLayout" stretch="0,1">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="textSourceDropdownLabel">
          <property name="text">
           <string>Text Source</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox"/>
+        <widget class="QComboBox" name="textSourceDropdownList"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="endMessageLayout" stretch="0,0,1">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
        <item>
         <widget class="QCheckBox" name="endMessageCheckBox">
          <property name="text">
@@ -133,12 +148,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_4"/>
+        <widget class="QLineEdit" name="timerEndMessage"/>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="sceneDropDownLayout">
+      <layout class="QHBoxLayout" name="sceneDropdownLayout">
        <item>
         <widget class="QCheckBox" name="switchSceneCheckBox">
          <property name="text">
@@ -154,7 +169,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="sceneSourceDropDownList"/>
+        <widget class="QComboBox" name="sceneSourceDropdownList"/>
        </item>
       </layout>
      </item>

@@ -36,7 +36,7 @@
 #include <obs-module.h>
 
 #include "plugin-macros.generated.h"
-#include "ui_CountdownTimer.ui"
+#include "ui_CountdownTimer.h"
 
 #define CONFIG "config.json"
 
@@ -56,29 +56,31 @@ public:
 		QWidget *countdownTimerUI;
 		QTimer *timer;
 		QTime *time;
-		QLCDNumber *timerDisplay;
-		QLineEdit *timerHours;
-		QLineEdit *timerMinutes;
-		QLineEdit *timerSeconds;
+		// QLCDNumber *timerDisplay;
+		// QLineEdit *timerHours;
+		// QLineEdit *timerMinutes;
+		// QLineEdit *timerSeconds;
 
-		QLineEdit *timerEndMessage;
-		QLabel *timerEndLabel;
+		// QLineEdit *timerEndMessage;
+		// QLabel *timerEndLabel;
 
-		QPushButton *playButton;
-		QPushButton *pauseButton;
-		QPushButton *resetButton;
+		// QPushButton *playButton;
+		// QPushButton *pauseButton;
+		// QPushButton *resetButton;
 
-		QComboBox *textSourceDropdownList;
-		QComboBox *sceneSourceDropdownList;
-		QLabel *sceneSwitchLabel;
+		// QComboBox *textSourceDropdownList;
+		// QComboBox *sceneSourceDropdownList;
+		// QLabel *sceneSwitchLabel;
 
-		QCheckBox *endMessageCheckBox;
-		QCheckBox *switchSceneCheckBox;
+		// QCheckBox *endMessageCheckBox;
+		// QCheckBox *switchSceneCheckBox;
 		OBSSignal textSourceAddedSignals;
 		OBSSignal textSourceRemovedSignals;
 
 		std::string textSourceNameText;
 		std::string sceneSourceNameText;
+
+		
 	};
 
 private:
@@ -87,19 +89,19 @@ private:
 
 	CountdownWidgetStruct *countdownTimerData;
 
-	std::unique_ptr<Ui::CountdownTimer> ui;
+	Ui::CountdownTimer *ui;
 
-	QVBoxLayout *SetupCountdownWidgetUI(CountdownWidgetStruct *context);
-	void StartTimerCounting(CountdownWidgetStruct *context);
-	void StopTimerCounting(CountdownWidgetStruct *context);
-	void InitialiseTimerTime(CountdownWidgetStruct *context);
+	void SetupCountdownWidgetUI();
+	void StartTimerCounting();
+	void StopTimerCounting();
+	void InitialiseTimerTime();
 	QString ConvertTimeToDisplayString(QTime *timeToConvert);
-	bool IsSetTimeZero(CountdownWidgetStruct *context);
-	void ConnectObsSignalHandlers(CountdownWidgetStruct* context);
-	void ConnectUISignalHandlers(CountdownWidgetStruct *context);
-	void UpdateTimeDisplay(CountdownWidgetStruct* context, QTime *time);
+	bool IsSetTimeZero();
+	void ConnectObsSignalHandlers();
+	void ConnectUISignalHandlers();
+	void UpdateTimeDisplay();
 	// void SetSelectedSource(const QString &sourceName);
-	void SetSourceText(CountdownWidgetStruct* context, QString newText);
+	void SetSourceText(QString newText);
 	void SetCurrentScene();
 	void SaveSettings();
 
@@ -116,7 +118,7 @@ private:
 	// static void UpdateSceneList(CountdownWidgetStruct *context);
 
 	static int CheckSourceType(obs_source_t *source);
-	static void LoadSavedSettings(CountdownWidgetStruct* context);
+	static void LoadSavedSettings(Ui::CountdownTimer *ui);
 	// static void AddSourceToList(CountdownWidgetStruct *context, obs_source_t *source, int sourceType);
 	// static void RemoveSourceFromList(CountdownWidgetStruct *context, obs_source_t *source, int sourceType);
 	// static void RenameSource(CountdownWidgetStruct *context, obs_source_t *source, int sourceType);
