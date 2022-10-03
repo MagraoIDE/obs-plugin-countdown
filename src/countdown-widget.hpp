@@ -36,11 +36,13 @@
 #include <obs-module.h>
 
 #include "plugin-macros.generated.h"
+#include "ui_CountdownTimer.ui"
 
 #define CONFIG "config.json"
 
 class CountdownDockWidget : public QDockWidget {
 	Q_OBJECT
+
 public:
 	explicit CountdownDockWidget(QWidget *parent = nullptr);
 	~CountdownDockWidget();
@@ -84,6 +86,8 @@ private:
 	static const int COUNTDOWNPERIOD = 1000;
 
 	CountdownWidgetStruct *countdownTimerData;
+
+	std::unique_ptr<Ui::CountdownTimer> ui;
 
 	QVBoxLayout *SetupCountdownWidgetUI(CountdownWidgetStruct *context);
 	void StartTimerCounting(CountdownWidgetStruct *context);
