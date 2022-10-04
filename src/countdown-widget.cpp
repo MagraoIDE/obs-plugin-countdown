@@ -5,7 +5,7 @@ CountdownDockWidget::CountdownDockWidget(QWidget *parent)
 {
 	countdownTimerData = new CountdownWidgetStruct;
 	ui->setupUi(this);
-
+	SetupCountdownWidgetUI();
 
 
 	obs_frontend_add_event_callback(OBSFrontendEventHandler,

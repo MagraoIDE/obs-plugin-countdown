@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>321</width>
-    <height>362</height>
+    <height>373</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,183 +23,177 @@
    <string>Countdown Timer</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
-   <widget class="QWidget" name="verticalLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>321</width>
-      <height>341</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_6">
-     <item>
-      <layout class="QHBoxLayout" name="timerDisplayLayout">
-       <item>
-        <widget class="QLCDNumber" name="timerDisplay">
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="smallDecimalPoint">
-          <bool>false</bool>
-         </property>
-         <property name="digitCount">
-          <number>8</number>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Filled</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="timerLayout">
-       <item>
-        <widget class="QLineEdit" name="timerHours">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="timerHoursLabel">
-         <property name="text">
-          <string>h</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="timerMinutes">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="timerMinutesLabel">
-         <property name="text">
-          <string>m</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="timerSeconds">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="timerSecondsLabel">
-         <property name="text">
-          <string>s</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="sourceDropDownLayout" stretch="0,1">
-       <item>
-        <widget class="QLabel" name="textSourceDropdownLabel">
-         <property name="text">
-          <string>Text Source</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="textSourceDropdownList"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="endMessageLayout" stretch="0,0,1">
-       <property name="spacing">
-        <number>-1</number>
-       </property>
-       <property name="sizeConstraint">
-        <enum>QLayout::SetMinimumSize</enum>
-       </property>
-       <item>
-        <widget class="QCheckBox" name="endMessageCheckBox">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="timerEndLabel">
-         <property name="text">
-          <string>End Message</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="timerEndMessage"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="sceneDropdownLayout">
-       <item>
-        <widget class="QCheckBox" name="switchSceneCheckBox">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="sceneSwitchLabel">
-         <property name="text">
-          <string>Switch Scene</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="sceneSourceDropdownList"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_12">
-       <item>
-        <widget class="QPushButton" name="resetButton">
-         <property name="text">
-          <string>Set/Reset</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pauseButton">
-         <property name="text">
-          <string>Pause</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="playButton">
-         <property name="text">
-          <string>Play</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="timerDisplayLayout">
+        <item>
+         <widget class="QLCDNumber" name="timerDisplay">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="smallDecimalPoint">
+           <bool>false</bool>
+          </property>
+          <property name="digitCount">
+           <number>8</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Filled</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="timerLayout">
+        <item>
+         <widget class="QLineEdit" name="timerHours">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="timerHoursLabel">
+          <property name="text">
+           <string>h</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="timerMinutes">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="timerMinutesLabel">
+          <property name="text">
+           <string>m</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="timerSeconds">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="timerSecondsLabel">
+          <property name="text">
+           <string>s</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="sourceDropDownLayout" stretch="0,1">
+        <item>
+         <widget class="QLabel" name="textSourceDropdownLabel">
+          <property name="text">
+           <string>Text Source</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="textSourceDropdownList"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="endMessageLayout" stretch="0,0,1">
+        <property name="spacing">
+         <number>-1</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <item>
+         <widget class="QCheckBox" name="endMessageCheckBox">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="timerEndLabel">
+          <property name="text">
+           <string>End Message</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="timerEndMessage"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="sceneDropdownLayout">
+        <item>
+         <widget class="QCheckBox" name="switchSceneCheckBox">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="sceneSwitchLabel">
+          <property name="text">
+           <string>Switch Scene</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="sceneSourceDropdownList"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QPushButton" name="resetButton">
+          <property name="icon">
+           <iconset theme="restartIcon"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pauseButton">
+          <property name="icon">
+           <iconset theme="pauseIcon"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="playButton">
+          <property name="icon">
+           <iconset theme="playIcon"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
